@@ -30,6 +30,10 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("com.mysql:mysql-connector-j")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+	runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.6.0")
 }
 
 tasks.withType<KotlinCompile> {
