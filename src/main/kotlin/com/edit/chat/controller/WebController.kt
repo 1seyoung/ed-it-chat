@@ -13,4 +13,5 @@ class WebController {
     fun index(): String {
         return "forward:/index.html"
     }
+
 }
