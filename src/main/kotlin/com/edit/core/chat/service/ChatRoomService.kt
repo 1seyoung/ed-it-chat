@@ -1,4 +1,4 @@
-package com.edit.chat.service
+package com.edit.core.chat.service
 
 import org.springframework.stereotype.Service
 import java.util.concurrent.ConcurrentHashMap

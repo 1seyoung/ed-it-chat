@@ -1,6 +1,6 @@
-package com.edit.chat.controller
+package com.edit.core.chat.controller
 
-import com.edit.chat.service.ChatService
+import com.edit.core.chat.service.ChatService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

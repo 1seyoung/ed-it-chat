@@ -1,4 +1,4 @@
-package com.edit.chat.model
+package com.edit.core.chat.model
 
 import jakarta.persistence.*
 import java.time.LocalDateTime

@@ -1,4 +1,4 @@
-package com.edit.chat.model
+package com.edit.core.chat.model
 
 data class ChatMessage(
         val roomId: String,

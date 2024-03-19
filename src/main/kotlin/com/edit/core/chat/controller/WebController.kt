@@ -1,4 +1,4 @@
-package com.edit.chat.controller
+package com.edit.core.chat.controller
 
 import org.springframework.boot.web.servlet.error.ErrorController
 import org.springframework.stereotype.Controller
