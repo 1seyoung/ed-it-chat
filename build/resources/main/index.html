@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="usernameForm">
+    <input type="text" id="username" placeholder="Enter your name...">
+    <button onclick="registerName()">Register Name</button>
+</div>
+<!-- 채팅 컨테이너 내부에 나가기 버튼 추가 -->
+<div id="chatContainer" style="display:none;">
+    <div id="chatBox"></div>
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="leaveChat()">Leave Chat</button> <!-- 채팅방 나가기 버튼 추가 -->
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
