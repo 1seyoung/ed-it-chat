@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: edit
+  profiles:
+    active: default
+
+server:
+  port: 8080
