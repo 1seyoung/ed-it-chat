@@ -1,7 +1,6 @@
 package com.edit.core.chat.service
 
 import com.edit.core.chat.model.User
-import com.edit.core.chat.repo.UserRepository
 import org.springframework.stereotype.Service
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicLong
