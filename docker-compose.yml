@@ -1,24 +1,31 @@
 version: '3'
 services:
-  app:
-    build: .
-    ports:
-      - "8080:8080"
+  mysql :
+    image : mysql:5.7
     environment:
-      - SPRING_PROFILES_ACTIVE=local
-    depends_on:
-      - mysql
-  mysql:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: edit
-      MYSQL_DATABASE: DB이름
-      MYSQL_USER: 계정이름
-      MYSQL_PASSWORD: 계정암호
+        MYSQL_ROOT_PASSWORD: simul_tech
+        MYSQL_DATABASE: simul_tech
+        MYSQL_USER: simul_tech
+        MYSQL_PASSWORD: simul_tech
     ports:
-      - "3306:3306"
+        - "3306:3306"
     volumes:
-      - db-data:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
+
+  mongo :
+    image : mongo
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: simul_tech
+        MONGO_INITDB_ROOT_PASSWORD: simul_tech
+    ports:
+        - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
 
 volumes:
-  db-data:
+    mysql-data:
+    mongo-data:
+
+# ======== End of docker-compose.yml ========
+# mysql : datasourece // mongodb :  data
+#TODO : DB 설정 정보 변경(외부 접근 불가 필요)

@@ -1,0 +1,18 @@
+# curl -X POST http://localhost:8080/api/chat/message
+#-H "Content-Type: application/json"
+#-d '{
+#    "roomUUID": "생성된 채팅방의 UUID",
+#    "senderId": 1,
+#    "message": "안녕, 어떻게 지내?"
+#}'
+POST http://localhost:8080/api/chat/message
+Content-Type: application/json
+
+{
+  "roomUUID": "생성된 채팅방의 UUID",
+  "senderId": 1,
+  "message": "안녕, 어떻게 지내?"
+}
+
+###
+

@@ -1,18 +1,19 @@
 package com.edit.config
 
 import org.springframework.context.annotation.Configuration
-import org.springframework.web.socket.config.annotation.EnableWebSocket
-import org.springframework.web.socket.config.annotation.WebSocketConfigurer
-import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
-import org.springframework.web.socket.WebSocketHandler
+import org.springframework.messaging.simp.config.MessageBrokerRegistry
+import org.springframework.web.socket.config.annotation.*
 
-@Configuration //애플리케이션의 설정을 담당하는 클래스
-@EnableWebSocket //스프링에게 웹소켓 기능을 활성화하도록 지시
-class WebSocketConfig(
-    val webSocketHandler: WebSocketHandler
-): WebSocketConfigurer {
+@Configuration
+@EnableWebSocketMessageBroker
+class WebSocketConfig : WebSocketMessageBrokerConfigurer {
 
-    override fun registerWebSocketHandlers(registry: WebSocketHandlerRegistry) {
-        registry.addHandler(webSocketHandler, "/ws/message").setAllowedOrigins("*")
+    override fun registerStompEndpoints(registry: StompEndpointRegistry) {
+        registry.addEndpoint("/ws").withSockJS()
+    }
+
+    override fun configureMessageBroker(registry: MessageBrokerRegistry) {
+        registry.setApplicationDestinationPrefixes("/pub")
+        registry.enableSimpleBroker("/sub")
     }
 }
